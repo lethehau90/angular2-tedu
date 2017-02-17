@@ -8,6 +8,7 @@ import { HttpModule } from '@angular/http';
 import { appRoutes } from './app.routes';
 import { HomeComponent } from './home.component';
 import { NotFoundComponent } from './notfound.component';
+import { EmployDetailComponent } from './employ-detail.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, HttpModule, appRoutes],
@@ -16,7 +17,8 @@ import { NotFoundComponent } from './notfound.component';
     AppComponent,
     EmployeeListComponent,
     HomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    EmployDetailComponent
   ]
   ,
   bootstrap: [AppComponent],
