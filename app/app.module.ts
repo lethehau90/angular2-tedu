@@ -9,6 +9,8 @@ import { appRoutes } from './app.routes';
 import { HomeComponent } from './home.component';
 import { NotFoundComponent } from './notfound.component';
 import { EmployDetailComponent } from './employ-detail.component';
+import { EmployeeOverviewComponent } from './employee-overview.component';
+import { EmployeeProjectsComponent } from './employee-project.component';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, HttpModule, appRoutes],
@@ -18,7 +20,9 @@ import { EmployDetailComponent } from './employ-detail.component';
     EmployeeListComponent,
     HomeComponent,
     NotFoundComponent,
-    EmployDetailComponent
+    EmployDetailComponent,
+    EmployeeOverviewComponent,
+    EmployeeProjectsComponent
   ]
   ,
   bootstrap: [AppComponent],

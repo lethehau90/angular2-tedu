@@ -11,7 +11,7 @@ export class EmployDetailComponent implements OnInit, OnDestroy {
     public _id: number;
     public subscription: any;
     public employee: any;
-    constructor(private router: Router, private activatedroute: ActivatedRoute,public employeeService: EmployeeService) {
+    constructor(private router: Router, private activatedroute: ActivatedRoute,private employeeService: EmployeeService) {
 
     }
     ngOnInit() {
