@@ -11,9 +11,9 @@ import { CheckSaveFormGuard } from './guards/check-save-form.guard';
 
 const routing: Routes = [
     { path: '', component: HomeComponent },
-    { path: 'employees', component: EmployeeListComponent, canActivate: [CheckLoginGuards] },
+    { path: 'employees', component: EmployeeListComponent },
     {
-        path: 'employees-detail/:id', component: EmployDetailComponent, canDeactivate: [CheckSaveFormGuard],
+        path: 'employees-detail/:id', component: EmployDetailComponent, 
         children: [
             { path: '', redirectTo: 'overview', pathMatch: 'full' },
             { path: 'overview', component: EmployeeOverviewComponent },
