@@ -9,27 +9,23 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require("@angular/core");
-var login_service_1 = require("./service/login.service");
-var AppComponent = (function () {
-    function AppComponent(loginService) {
+var login_service_1 = require("../service/login.service");
+var CheckLoginGuards = (function () {
+    function CheckLoginGuards(loginService) {
         this.loginService = loginService;
     }
-    AppComponent.prototype.Logout = function () {
-        this.loginService.setLogin(false);
-        alert('logout');
+    CheckLoginGuards.prototype.canActivate = function () {
+        //return this.loginService.IsLogged();
+        var status = this.loginService.IsLogged();
+        if (status == false)
+            alert('you don\'t have permission acssec tho this page');
+        return status;
     };
-    AppComponent.prototype.ngOnInit = function () {
-        this.isLoggedin = this.loginService._isLoggedin;
-    };
-    return AppComponent;
+    return CheckLoginGuards;
 }());
-AppComponent = __decorate([
-    core_1.Component({
-        selector: 'my-app',
-        templateUrl: "app/app.component.html",
-        styleUrls: ["app/app.component.css"]
-    }),
+CheckLoginGuards = __decorate([
+    core_1.Injectable(),
     __metadata("design:paramtypes", [login_service_1.LoginService])
-], AppComponent);
-exports.AppComponent = AppComponent;
-//# sourceMappingURL=app.component.js.map
+], CheckLoginGuards);
+exports.CheckLoginGuards = CheckLoginGuards;
+//# sourceMappingURL=check-login.guards.js.map
