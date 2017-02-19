@@ -2,6 +2,15 @@
     <li *ngFor="let employee of employees">{{employee.name}}</li>
 </ul>-->
 <div class="row">
+    <div class="col-md-12">
+        <div class="col-md-4">
+            <input type="text" [(ngModel)]="keyword" name="keyword">     
+            <button (click)="Search()">Search</button>
+        </div>
+       
+    </div>
+</div>
+<div class="row">
     <a class="btn btn-success" [routerLink]="['/employees-add']"> Add new</a>
 </div>
 <table class="table">

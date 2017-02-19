@@ -29,6 +29,9 @@ var EmployeeService = (function () {
     EmployeeService.prototype.GetSingle = function (id) {
         return this._http.get(this.apiUrl + id).map(function (response) { return response.json(); });
     };
+    EmployeeService.prototype.Search = function (keyword) {
+        return this._http.get(this.apiUrl + "?search=" + keyword).map(function (response) { return response.json(); });
+    };
     EmployeeService.prototype.Update = function (id, data) {
         return this._http.put(this.apiUrl + id, data).map(function (response) { return response.json(); });
     };

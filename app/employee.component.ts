@@ -8,6 +8,7 @@ import { Router, ActivatedRoute } from '@angular/router'
 })
 export class EmployeeListComponent implements OnInit {
     public employees: any[];
+    public keyword : string;
     public pages: number[];
     public currentPage: number;
     constructor(private employeeservice: EmployeeService, private router: Router, private activateroute: ActivatedRoute) {
@@ -20,9 +21,17 @@ export class EmployeeListComponent implements OnInit {
         });
 
         this.loadData();
-
         this.pages = [1, 2, 3, 4, 5];
+    }
 
+    Search(){
+         //this.employees = this.employeeservice.GetList();
+        this.employeeservice.Search(this.keyword).subscribe((response: any) => {
+            this.employees = response;
+            //console.log(response);
+        }, error => {
+            console.log(error);
+        });
     }
     Delete(id: number) {
         let confirmResult = confirm("Are you sure to delete employee?")
