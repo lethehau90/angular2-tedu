@@ -2,7 +2,7 @@
     <li *ngFor="let employee of employees">{{employee.name}}</li>
 </ul>-->
 <div class="row">
-    <a [routerLink]="['/employees-add']"> Add new</a>
+    <a class="btn btn-success" [routerLink]="['/employees-add']"> Add new</a>
 </div>
 <table class="table">
     <thead>
@@ -21,7 +21,8 @@
             <td>{{employee.createdAt | date }}</td>
             <td>
                 <a [routerLink]="['/employees-detail',employee.id]">Show detail</a>
-                <a [routerLink]="['/employees-edit',employee.id]">Show detail</a>
+                <a [routerLink]="['/employees-edit',employee.id]" class="btn btn-primary">Edit</a>
+                <button (click)="Delete(employee.id)"  class="btn btn-danger">Delete</button>
             </td>
         </tr>
     </tbody>

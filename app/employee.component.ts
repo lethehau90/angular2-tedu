@@ -17,7 +17,25 @@ export class EmployeeListComponent implements OnInit {
             this.currentPage = params['pageNumber'] || 1;
             console.log(this.currentPage);
             console.log(params['filter']);
-        })
+        });
+
+        this.loadData();
+
+        this.pages = [1, 2, 3, 4, 5];
+
+    }
+    Delete(id: number) {
+        let confirmResult = confirm("Are you sure to delete employee?")
+        if (confirmResult) {
+            this.employeeservice.Delete(id).subscribe(response => {
+                if (response) {
+                    alert("Delete ok");
+                    this.loadData();
+                }
+            })
+        }
+    }
+    loadData(){
         //this.employees = this.employeeservice.GetList();
         this.employeeservice.GetList().subscribe((response: any) => {
             this.employees = response;
@@ -25,7 +43,5 @@ export class EmployeeListComponent implements OnInit {
         }, error => {
             console.log(error);
         });
-
-        this.pages = [1, 2, 3, 4, 5];
     }
 }

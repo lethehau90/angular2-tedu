@@ -24,6 +24,23 @@ var EmployeeListComponent = (function () {
             console.log(_this.currentPage);
             console.log(params['filter']);
         });
+        this.loadData();
+        this.pages = [1, 2, 3, 4, 5];
+    };
+    EmployeeListComponent.prototype.Delete = function (id) {
+        var _this = this;
+        var confirmResult = confirm("Are you sure to delete employee?");
+        if (confirmResult) {
+            this.employeeservice.Delete(id).subscribe(function (response) {
+                if (response) {
+                    alert("Delete ok");
+                    _this.loadData();
+                }
+            });
+        }
+    };
+    EmployeeListComponent.prototype.loadData = function () {
+        var _this = this;
         //this.employees = this.employeeservice.GetList();
         this.employeeservice.GetList().subscribe(function (response) {
             _this.employees = response;
@@ -31,7 +48,6 @@ var EmployeeListComponent = (function () {
         }, function (error) {
             console.log(error);
         });
-        this.pages = [1, 2, 3, 4, 5];
     };
     return EmployeeListComponent;
 }());
