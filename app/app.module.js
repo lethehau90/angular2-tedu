@@ -19,6 +19,8 @@ var app_routes_1 = require("./app.routes");
 var home_component_1 = require("./home.component");
 var notfound_component_1 = require("./notfound.component");
 var employ_detail_component_1 = require("./employ-detail.component");
+var employee_edit_component_1 = require("./employee-edit.component");
+var employee_add_component_1 = require("./employee-add.component");
 var employee_overview_component_1 = require("./employee-overview.component");
 var employee_project_component_1 = require("./employee-project.component");
 var login_component_1 = require("./login.component");
@@ -36,6 +38,8 @@ AppModule = __decorate([
             home_component_1.HomeComponent,
             notfound_component_1.NotFoundComponent,
             employ_detail_component_1.EmployDetailComponent,
+            employee_edit_component_1.EmployeeEditComponent,
+            employee_add_component_1.EmployeeAddComponent,
             employee_overview_component_1.EmployeeOverviewComponent,
             employee_project_component_1.EmployeeProjectsComponent,
             login_component_1.LoginComponent

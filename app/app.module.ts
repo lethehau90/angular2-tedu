@@ -13,7 +13,11 @@ import { HttpModule } from '@angular/http';
 import { appRoutes } from './app.routes';
 import { HomeComponent } from './home.component';
 import { NotFoundComponent } from './notfound.component';
+
 import { EmployDetailComponent } from './employ-detail.component';
+import { EmployeeEditComponent } from './employee-edit.component';
+import { EmployeeAddComponent } from './employee-add.component';
+
 import { EmployeeOverviewComponent } from './employee-overview.component';
 import { EmployeeProjectsComponent } from './employee-project.component';
 import { LoginComponent } from './login.component';
@@ -27,7 +31,11 @@ import { LoginComponent } from './login.component';
     EmployeeListComponent,
     HomeComponent,
     NotFoundComponent,
+    
     EmployDetailComponent,
+    EmployeeEditComponent,
+    EmployeeAddComponent,
+
     EmployeeOverviewComponent,
     EmployeeProjectsComponent,
     LoginComponent

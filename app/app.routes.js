@@ -4,12 +4,16 @@ var home_component_1 = require("./home.component");
 var employee_component_1 = require("./employee.component");
 var notfound_component_1 = require("./notfound.component");
 var employ_detail_component_1 = require("./employ-detail.component");
+var employee_edit_component_1 = require("./employee-edit.component");
+var employee_add_component_1 = require("./employee-add.component");
 var employee_overview_component_1 = require("./employee-overview.component");
 var employee_project_component_1 = require("./employee-project.component");
 var login_component_1 = require("./login.component");
 var routing = [
     { path: '', component: home_component_1.HomeComponent },
     { path: 'employees', component: employee_component_1.EmployeeListComponent },
+    { path: 'employees-edit/:id', component: employee_edit_component_1.EmployeeEditComponent },
+    { path: 'employees-add', component: employee_add_component_1.EmployeeAddComponent },
     {
         path: 'employees-detail/:id', component: employ_detail_component_1.EmployDetailComponent,
         children: [
