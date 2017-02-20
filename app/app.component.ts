@@ -1,23 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import { LoginService } from './service/login.service'
+import { Component } from '@angular/core';
 @Component({
   selector: 'my-app',
   templateUrl: `app/app.component.html`,
   styleUrls: [`app/app.component.css`]
 })
-export class AppComponent implements OnInit {
-  public isLoggedin: boolean;
-  constructor(private loginService: LoginService) {
+export class AppComponent {
+   public title ="Le Hau";
+   onSubmit(value: any){
+      console.log(value);
+   }
 
-  }
+   public cities = [{Id: 1, Name: "HaNoi"},{Id:2 , Name: "HCM"}];
 
-  Logout() {
-    this.loginService.setLogin(false);
-    alert('logout')
-  }
-
-  ngOnInit() {
-    this.isLoggedin = this.loginService._isLoggedin;
-  }
-
-}
+ }
