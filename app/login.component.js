@@ -8,10 +8,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var login_service_1 = require("./service/login.service");
-var LoginComponent = (function () {
+var LoginComponent = /** @class */ (function () {
     function LoginComponent(router, loginService) {
         this.router = router;
         this.loginService = loginService;
@@ -23,14 +24,14 @@ var LoginComponent = (function () {
             this.router.navigate(['/']);
         }
     };
+    LoginComponent = __decorate([
+        core_1.Component({
+            selector: 'login-componenet',
+            templateUrl: './app/login.component.html'
+        }),
+        __metadata("design:paramtypes", [router_1.Router, login_service_1.LoginService])
+    ], LoginComponent);
     return LoginComponent;
 }());
-LoginComponent = __decorate([
-    core_1.Component({
-        selector: 'login-componenet',
-        templateUrl: './app/login.component.html'
-    }),
-    __metadata("design:paramtypes", [router_1.Router, login_service_1.LoginService])
-], LoginComponent);
 exports.LoginComponent = LoginComponent;
 //# sourceMappingURL=login.component.js.map

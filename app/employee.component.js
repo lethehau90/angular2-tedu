@@ -8,9 +8,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var employee_service_1 = require("./service/employee.service");
-var EmployeeListComponent = (function () {
+var EmployeeListComponent = /** @class */ (function () {
     function EmployeeListComponent(employeeservice) {
         this.employeeservice = employeeservice;
     }
@@ -24,14 +25,14 @@ var EmployeeListComponent = (function () {
             console.log(error);
         });
     };
+    EmployeeListComponent = __decorate([
+        core_1.Component({
+            selector: 'employee-list',
+            templateUrl: './app/employee.component.html'
+        }),
+        __metadata("design:paramtypes", [employee_service_1.EmployeeService])
+    ], EmployeeListComponent);
     return EmployeeListComponent;
 }());
-EmployeeListComponent = __decorate([
-    core_1.Component({
-        selector: 'employee-list',
-        templateUrl: './app/employee.component.html'
-    }),
-    __metadata("design:paramtypes", [employee_service_1.EmployeeService])
-], EmployeeListComponent);
 exports.EmployeeListComponent = EmployeeListComponent;
 //# sourceMappingURL=employee.component.js.map

@@ -8,23 +8,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-var HomeComponent = (function () {
+var HomeComponent = /** @class */ (function () {
     function HomeComponent(router) {
         this.router = router;
     }
     HomeComponent.prototype.GotoEmployee = function () {
         this.router.navigate(['employees']);
     };
+    HomeComponent = __decorate([
+        core_1.Component({
+            selector: 'home-component',
+            template: "<h1>this is home component</h1>\n    <button (click)=\"GotoEmployee()\">Goto Employee</button>\n    \n    "
+        }),
+        __metadata("design:paramtypes", [router_1.Router])
+    ], HomeComponent);
     return HomeComponent;
 }());
-HomeComponent = __decorate([
-    core_1.Component({
-        selector: 'home-component',
-        template: "<h1>this is home component</h1>\n    <button (click)=\"GotoEmployee()\">Goto Employee</button>\n    \n    "
-    }),
-    __metadata("design:paramtypes", [router_1.Router])
-], HomeComponent);
 exports.HomeComponent = HomeComponent;
 //# sourceMappingURL=home.component.js.map

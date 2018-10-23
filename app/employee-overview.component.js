@@ -8,9 +8,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
-var EmployeeOverviewComponent = (function () {
+var EmployeeOverviewComponent = /** @class */ (function () {
     function EmployeeOverviewComponent(router, activateroute) {
         this.router = router;
         this.activateroute = activateroute;
@@ -23,14 +24,14 @@ var EmployeeOverviewComponent = (function () {
     };
     EmployeeOverviewComponent.prototype.ngOnDestroy = function () {
     };
+    EmployeeOverviewComponent = __decorate([
+        core_1.Component({
+            selector: 'employee-overview-component',
+            template: "<h3>This overview employee</h3>"
+        }),
+        __metadata("design:paramtypes", [router_1.Router, router_1.ActivatedRoute])
+    ], EmployeeOverviewComponent);
     return EmployeeOverviewComponent;
 }());
-EmployeeOverviewComponent = __decorate([
-    core_1.Component({
-        selector: 'employee-overview-component',
-        template: "<h3>This overview employee</h3>"
-    }),
-    __metadata("design:paramtypes", [router_1.Router, router_1.ActivatedRoute])
-], EmployeeOverviewComponent);
 exports.EmployeeOverviewComponent = EmployeeOverviewComponent;
 //# sourceMappingURL=employee-overview.component.js.map

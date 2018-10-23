@@ -8,9 +8,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var login_service_1 = require("../service/login.service");
-var CheckLoginGuards = (function () {
+var CheckLoginGuards = /** @class */ (function () {
     function CheckLoginGuards(loginService) {
         this.loginService = loginService;
     }
@@ -21,11 +22,11 @@ var CheckLoginGuards = (function () {
             alert('you don\'t have permission acssec tho this page');
         return status;
     };
+    CheckLoginGuards = __decorate([
+        core_1.Injectable(),
+        __metadata("design:paramtypes", [login_service_1.LoginService])
+    ], CheckLoginGuards);
     return CheckLoginGuards;
 }());
-CheckLoginGuards = __decorate([
-    core_1.Injectable(),
-    __metadata("design:paramtypes", [login_service_1.LoginService])
-], CheckLoginGuards);
 exports.CheckLoginGuards = CheckLoginGuards;
 //# sourceMappingURL=check-login.guards.js.map
